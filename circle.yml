@@ -3,7 +3,7 @@ machine:
     version: 0.10.28
 
 test:
-  overrides:
+  override:
     - npm install
     - npm test
     - npm run cover
