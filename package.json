@@ -1,0 +1,41 @@
+{
+  "name": "socket-utils",
+  "version": "0.0.2",
+  "description": "very simple utilities to get information from a socket.io connection",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "blanket": "~1.1.6",
+    "jostle": "~0.1.1",
+    "mocha": "~1.18.2",
+    "should": "~3.3.1",
+    "socket.io": "~1.0.4",
+    "socket.io-client": "~1.0.4"
+  },
+  "scripts": {
+    "test": "mocha -R spec",
+    "cover": "mocha -r blanket -R json-cov | jostle",
+    "cover-html": "mocha -r blanket -R html-cov > coverage.html",
+    "circle": "mkdir -p $CIRCLE_ARTIFACTS && mocha -r blanket -R html-cov > $CIRCLE_ARTIFACTS/coverage.html"
+  },
+  "license": "MIT",
+  "keywords": [
+    "socket.io",
+    "utilities"
+  ],
+  "author": "Evan Lucas <evan@evanlucas.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GAWMiners/socket-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/GAWMiners/socket-utils/issues"
+  },
+  "homepage": "https://github.com/GAWMiners/socket-utils",
+  "config": {
+    "blanket": {
+      "pattern": "/lib/",
+      "data-cover-never": "node_modules"
+    }
+  }
+}
